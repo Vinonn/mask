@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario Mask</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+</head>
+<body>
+	
+	<h1 class="container">Cadastre-se!</h1>
+	<form id="formulario" method="post" class="container">
+		<div>
+			<label for="nome">Nome:</label>
+			<input type="text" name="nome" id="nome" required minlength="3">
+		</div>
+
+		<div>
+			<label for="email">E-mail: </label>
+			<input type="email" name="email" id="email" required >
+		</div>
+        <div>
+			<label for="cellphone">Telefone: </label>
+			<input type="cellphone" name="cellphone" id="cellphone" required maxlength="15" >
+        </div>
+        <div>
+			<label for="cpf">CPF: </label>
+			<input type="cpf" name="cpf" id="cpf" required>
+        </div>
+        <div>
+			<label for="data">Data de nascimento: </label>
+			<input type="data" name="data" id="data" required>
+        </div>
+        <div>
+			<label for="endereço">Endereço: </label>
+			<input type="endereço" name="endereço" id="endereço" required>
+        </div>		
+        <div>
+			<label for="cep">CEP: </label>
+			<input type="cep" name="cep" id="cep" required>
+        </div>		
+        <div>
+			<label for="estado">Estado: </label>
+			<input type="estado" name="estado" id="estado" required>
+        </div>	
+        <div>
+			<label for="cidade">Cidade: </label>
+			<input type="cidade" name="cidade" id="cidade" required>
+        </div>	
+        <br>
+        <div>
+            <input class="input_box" name="checkbox" type="checkbox" value="termo" /> Eu li e concordo com os termos de uso.
+        </div>
+        <br>
+
+		<div>
+			<input type="submit" value="Cadastrar">
+		</div>
+	</form>
+	
+	<script>
+        src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"
+    </script>
+	<script 
+		src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script>
+     <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js">
+     </script>
+    
+    <script type="text/javascript">
+        $("#cellphone").mask('(00) 00000-0000'); // (11) 11234-5678
+        $("#cpf").mask('000.000.000-00'); // 414.124.124-12
+        $("#data").mask('00/00/0000'); // 12/12/2012
+        $('#formulario').validate();
+	</script>
+	
+
+</body>
+</html>
